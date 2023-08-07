@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { ConfigProvider, Table, theme } from 'antd';
 import axios from 'axios';
-import './App.css';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import createColumns from './utils/createColumns';
 import createRows from './utils/createRows';
 import CustomDropdown from './components/dropdown/CustomDropdown';
+import Footer from './components/footer/Footer';
+import './App.css';
 
 function App() {
   const [table, setTable] = useState({ header: [], data: [] });
@@ -70,9 +71,7 @@ function App() {
         />
       </div>
 
-      <footer>
-        <span>Выполнил Давид Газиев</span>
-      </footer>
+      <Footer />
     </ConfigProvider>
   );
 }

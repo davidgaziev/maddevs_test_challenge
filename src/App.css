@@ -34,11 +34,21 @@ th span {
 }
 
 footer {
+  width: 100%;
+
   position: fixed;
   bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
 
   padding: 1rem 2rem;
 
   font-size: 24px;
   font-weight: 600;
+
+  & .links {
+    display: flex;
+    gap: 1rem;
+  }
 }

@@ -25,4 +25,12 @@ body {
   min-height: 100vh;
 }
 
+a {
+  color: rgba(255, 255, 255, 0.87);
 
+  text-decoration: none;
+
+  &:hover {
+    color: #a61d24;
+  }
+}
