@@ -1,8 +1,46 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center" >
+  <img width="400" alt="logo" src="https://github.com/davidgaziev/maddevs_test_challenge/assets/86723795/16e9d945-caab-4c00-81ed-d8a60df3f5dd">
+  <h1>
+    Тестовое задание Mad Devs
+  </h1>
+  
+</div>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Приложение представляет собой реализацию унификации табличных отчетов. Для данных о таблицах были созданы заглушки. Выбор таблицы происходит с помощью dropdown-а. 
+Также была реализована сортировка таблицы по колонкам, в задании этого не было, по своему опыту использования таблиц - я считаю необходимым иметь ее. 
+
+## Инструменты
+
+- [React][React-url] - JS-библиотека для создания пользовательских интерфейсов
+- [Ant Design][Antd-url] - библиотека компонентов, с хорошей документацией и красивым UI
+- [Mock Service Worker][MSW-url] - удобное решение для мока данных
+- [Docker][Docker-url] - служит для контейнеризации приложений
+
+## Запуск
+
+Для запуски приложения у вас должен быть установлен [Docker][Docker-url]
+
+Также проверьте запущен ли Docker-демон
+
+```sh
+# Склонируйте репозиторий
+% git clone https://github.com/davidgaziev/maddevs_test_challenge
+# Перейдите в директорию с приложением
+% cd maddevs_test_challenge
+# Запустите команду 
+% docker compose up
+```
+
+ ## Заключение
+
+ Для реализации этого приложения было изучено: Docker, Аnt Design и MSW. Это мой первый опыт в работе с данными инструментами. Я получил много знаний о них и опыт работы с ними. 
+ Задание было очень интересным, при его решении я получил удовольствие и благодаря нему я приобрел больше знаний о веб разработке. 
+
+
+
+[React-url]: https://reactjs.org/
+[Antd-url]: https://ant.design/
+[MSW-url]: https://mswjs.io/ 
+[Docker-url]: https://www.docker.com/
