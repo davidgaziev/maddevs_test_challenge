@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  box-shadow:0 16px 32px -16px rgba(0,0,0,.1),0 0 0 1px hsla(0,0%,100%,.05);
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dropdown {
+  margin: 1rem 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  max-width: 1280px;
+}
+
+tr {
+  font-size: 18px;
+}
+
+td {
+  font-size: 16px;
+}
+
+th span {
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  padding: 1rem 2rem;
+
+  font-size: 24px;
+  font-weight: 600;
+}
