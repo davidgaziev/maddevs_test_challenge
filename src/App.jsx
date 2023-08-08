@@ -12,21 +12,22 @@ function App() {
   const [table, setTable] = useState({ header: [], data: [] });
   const [tableId, setTableId] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  async function fetchData(id) {
+    setLoading(true);
+    await axios
+      .get(`/data/${id}`)
+      .then((response) => {
+        setLoading(false);
+        setTable(response.data);
+      })
+      .catch(() => {
+        setIsError(true);
+      });
+  }
 
   useEffect(() => {
-    async function fetchData(id) {
-      setLoading(true);
-      await axios
-        .get(`/data/${id}`)
-        .then((response) => {
-          setLoading(false);
-          setTable(response.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-
     fetchData(tableId);
   }, [tableId]);
 
@@ -51,24 +52,31 @@ function App() {
       }}
     >
       <header>
-        <Logo />
+        <a href="http://maddevs.io" target="_blank" rel="noopener noreferrer">
+          <Logo />
+        </a>
         <span>Тестовое задание</span>
       </header>
 
       <div className="wrapper">
         <CustomDropdown setTableId={setTableId} />
-
-        <Table
-          locale={{
-            triggerDesc: 'Сортировка по возрастанию',
-            triggerAsc: 'Сортировка по убыванию',
-            cancelSort: 'Отменить сортировку',
-          }}
-          pagination={false}
-          loading={loading}
-          columns={columns}
-          dataSource={rows}
-        />
+        {isError ? (
+          <h1>
+            Ошибка <br /> Перезагрузите страницу
+          </h1>
+        ) : (
+          <Table
+            locale={{
+              triggerDesc: 'Сортировка по возрастанию',
+              triggerAsc: 'Сортировка по убыванию',
+              cancelSort: 'Отменить сортировку',
+            }}
+            pagination={false}
+            loading={loading}
+            columns={columns}
+            dataSource={rows}
+          />
+        )}
       </div>
 
       <Footer />
